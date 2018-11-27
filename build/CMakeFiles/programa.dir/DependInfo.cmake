@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/eduardo/Desktop/temp/meuProjeto/main.cpp" "/home/eduardo/Desktop/temp/meuProjeto/build/CMakeFiles/programa.dir/main.cpp.o"
-  "/home/eduardo/Desktop/temp/meuProjeto/src/Matematica.cpp" "/home/eduardo/Desktop/temp/meuProjeto/build/CMakeFiles/programa.dir/src/Matematica.cpp.o"
+  "/home/eduardo/Desktop/temp/cmake-example/main.cpp" "/home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles/programa.dir/main.cpp.o"
+  "/home/eduardo/Desktop/temp/cmake-example/src/Fracao.cpp" "/home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles/programa.dir/src/Fracao.cpp.o"
+  "/home/eduardo/Desktop/temp/cmake-example/src/Matematica.cpp" "/home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles/programa.dir/src/Matematica.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

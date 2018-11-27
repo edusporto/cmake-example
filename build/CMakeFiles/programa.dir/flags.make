@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/eduardo/Desktop/temp/meuProjeto/src -I/home/eduardo/Desktop/temp/meuProjeto/include 
+CXX_INCLUDES = -I/home/eduardo/Desktop/temp/cmake-example/src -I/home/eduardo/Desktop/temp/cmake-example/include 
 

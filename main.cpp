@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Matematica.h"
+#include "fracao.h"
 
 using namespace std;
 
@@ -20,6 +21,18 @@ bool fim()
 
 int main()
 {
+    // Testes com a classe Fracao
+    Fracao f1(2, 10), f2(3, 45), f3(10, 6);
+    f1.simplificar();
+    f2.simplificar();
+    f3.simplificar();
+
+    cout << f1.getNumerador() << "/" << f1.getDenominador() << endl;
+    cout << f2.getNumerador() << "/" << f2.getDenominador() << endl;
+    cout << f3.getNumerador() << "/" << f3.getDenominador() << endl;
+
+    // Testes com a classe Matematica
+    /*
     double n1;
     double n2;
     double resposta;
@@ -61,6 +74,7 @@ int main()
 
         cout << "\nA resposta eh: " << resposta << endl;
     } while (!fim());
-    
+    */
+
     return 0;
 }

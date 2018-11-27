@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/eduardo/Desktop/temp/meuProjeto
+CMAKE_SOURCE_DIR = /home/eduardo/Desktop/temp/cmake-example
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/eduardo/Desktop/temp/meuProjeto/build
+CMAKE_BINARY_DIR = /home/eduardo/Desktop/temp/cmake-example/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eduardo/Desktop/temp/meuProjeto/build/CMakeFiles /home/eduardo/Desktop/temp/meuProjeto/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles /home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eduardo/Desktop/temp/meuProjeto/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/programa.dir/build.make CMakeFiles/programa.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Fracao.o: src/Fracao.cpp.o
+
+.PHONY : src/Fracao.o
+
+# target to build an object file
+src/Fracao.cpp.o:
+	$(MAKE) -f CMakeFiles/programa.dir/build.make CMakeFiles/programa.dir/src/Fracao.cpp.o
+.PHONY : src/Fracao.cpp.o
+
+src/Fracao.i: src/Fracao.cpp.i
+
+.PHONY : src/Fracao.i
+
+# target to preprocess a source file
+src/Fracao.cpp.i:
+	$(MAKE) -f CMakeFiles/programa.dir/build.make CMakeFiles/programa.dir/src/Fracao.cpp.i
+.PHONY : src/Fracao.cpp.i
+
+src/Fracao.s: src/Fracao.cpp.s
+
+.PHONY : src/Fracao.s
+
+# target to generate assembly for a file
+src/Fracao.cpp.s:
+	$(MAKE) -f CMakeFiles/programa.dir/build.make CMakeFiles/programa.dir/src/Fracao.cpp.s
+.PHONY : src/Fracao.cpp.s
+
 src/Matematica.o: src/Matematica.cpp.o
 
 .PHONY : src/Matematica.o
@@ -189,6 +216,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/Fracao.o"
+	@echo "... src/Fracao.i"
+	@echo "... src/Fracao.s"
 	@echo "... src/Matematica.o"
 	@echo "... src/Matematica.i"
 	@echo "... src/Matematica.s"

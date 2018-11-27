@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/eduardo/Desktop/temp/meuProjeto
+CMAKE_SOURCE_DIR = /home/eduardo/Desktop/temp/cmake-example
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/eduardo/Desktop/temp/meuProjeto/build
+CMAKE_BINARY_DIR = /home/eduardo/Desktop/temp/cmake-example/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/programa.dir/depend.make
@@ -59,43 +59,58 @@ include CMakeFiles/programa.dir/flags.make
 
 CMakeFiles/programa.dir/main.cpp.o: CMakeFiles/programa.dir/flags.make
 CMakeFiles/programa.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eduardo/Desktop/temp/meuProjeto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/programa.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/programa.dir/main.cpp.o -c /home/eduardo/Desktop/temp/meuProjeto/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/programa.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/programa.dir/main.cpp.o -c /home/eduardo/Desktop/temp/cmake-example/main.cpp
 
 CMakeFiles/programa.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/programa.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eduardo/Desktop/temp/meuProjeto/main.cpp > CMakeFiles/programa.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eduardo/Desktop/temp/cmake-example/main.cpp > CMakeFiles/programa.dir/main.cpp.i
 
 CMakeFiles/programa.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/programa.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eduardo/Desktop/temp/meuProjeto/main.cpp -o CMakeFiles/programa.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eduardo/Desktop/temp/cmake-example/main.cpp -o CMakeFiles/programa.dir/main.cpp.s
+
+CMakeFiles/programa.dir/src/Fracao.cpp.o: CMakeFiles/programa.dir/flags.make
+CMakeFiles/programa.dir/src/Fracao.cpp.o: ../src/Fracao.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/programa.dir/src/Fracao.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/programa.dir/src/Fracao.cpp.o -c /home/eduardo/Desktop/temp/cmake-example/src/Fracao.cpp
+
+CMakeFiles/programa.dir/src/Fracao.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/programa.dir/src/Fracao.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eduardo/Desktop/temp/cmake-example/src/Fracao.cpp > CMakeFiles/programa.dir/src/Fracao.cpp.i
+
+CMakeFiles/programa.dir/src/Fracao.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/programa.dir/src/Fracao.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eduardo/Desktop/temp/cmake-example/src/Fracao.cpp -o CMakeFiles/programa.dir/src/Fracao.cpp.s
 
 CMakeFiles/programa.dir/src/Matematica.cpp.o: CMakeFiles/programa.dir/flags.make
 CMakeFiles/programa.dir/src/Matematica.cpp.o: ../src/Matematica.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eduardo/Desktop/temp/meuProjeto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/programa.dir/src/Matematica.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/programa.dir/src/Matematica.cpp.o -c /home/eduardo/Desktop/temp/meuProjeto/src/Matematica.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/programa.dir/src/Matematica.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/programa.dir/src/Matematica.cpp.o -c /home/eduardo/Desktop/temp/cmake-example/src/Matematica.cpp
 
 CMakeFiles/programa.dir/src/Matematica.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/programa.dir/src/Matematica.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eduardo/Desktop/temp/meuProjeto/src/Matematica.cpp > CMakeFiles/programa.dir/src/Matematica.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eduardo/Desktop/temp/cmake-example/src/Matematica.cpp > CMakeFiles/programa.dir/src/Matematica.cpp.i
 
 CMakeFiles/programa.dir/src/Matematica.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/programa.dir/src/Matematica.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eduardo/Desktop/temp/meuProjeto/src/Matematica.cpp -o CMakeFiles/programa.dir/src/Matematica.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eduardo/Desktop/temp/cmake-example/src/Matematica.cpp -o CMakeFiles/programa.dir/src/Matematica.cpp.s
 
 # Object files for target programa
 programa_OBJECTS = \
 "CMakeFiles/programa.dir/main.cpp.o" \
+"CMakeFiles/programa.dir/src/Fracao.cpp.o" \
 "CMakeFiles/programa.dir/src/Matematica.cpp.o"
 
 # External object files for target programa
 programa_EXTERNAL_OBJECTS =
 
 programa: CMakeFiles/programa.dir/main.cpp.o
+programa: CMakeFiles/programa.dir/src/Fracao.cpp.o
 programa: CMakeFiles/programa.dir/src/Matematica.cpp.o
 programa: CMakeFiles/programa.dir/build.make
 programa: CMakeFiles/programa.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/eduardo/Desktop/temp/meuProjeto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable programa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable programa"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/programa.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +123,6 @@ CMakeFiles/programa.dir/clean:
 .PHONY : CMakeFiles/programa.dir/clean
 
 CMakeFiles/programa.dir/depend:
-	cd /home/eduardo/Desktop/temp/meuProjeto/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/eduardo/Desktop/temp/meuProjeto /home/eduardo/Desktop/temp/meuProjeto /home/eduardo/Desktop/temp/meuProjeto/build /home/eduardo/Desktop/temp/meuProjeto/build /home/eduardo/Desktop/temp/meuProjeto/build/CMakeFiles/programa.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/eduardo/Desktop/temp/cmake-example/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/eduardo/Desktop/temp/cmake-example /home/eduardo/Desktop/temp/cmake-example /home/eduardo/Desktop/temp/cmake-example/build /home/eduardo/Desktop/temp/cmake-example/build /home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles/programa.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/programa.dir/depend
 

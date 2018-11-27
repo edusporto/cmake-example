@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-../include/Matematica.h
+../include/fracao.h
 
-/home/eduardo/Desktop/temp/meuProjeto/src/Matematica.cpp
-Matematica.h
-/home/eduardo/Desktop/temp/meuProjeto/src/Matematica.h
+/home/eduardo/Desktop/temp/cmake-example/src/Fracao.cpp
+fracao.h
+/home/eduardo/Desktop/temp/cmake-example/src/fracao.h
 
