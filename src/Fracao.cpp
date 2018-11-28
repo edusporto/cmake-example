@@ -51,14 +51,31 @@ void Fracao::simplificar() {
         fim=true;
         for (i=2; i<=menor; i++) {
             if (menor%i==0 && maior%i==0) {
-                this->n = this->n/2;
-                this->d = this->d/2;
-                menor = menor/2;
-                maior = maior/2;
+                this->n = this->n/i;
+                this->d = this->d/i;
+                menor = menor/i;
+                maior = maior/i;
                 fim=false;
 
                 break;
             }
         }
     }
+}
+
+Fracao Fracao::operator+(const Fracao& f) {
+    if (this->d == f.d)
+        return Fracao(this->n + f.n, this->d);
+    
+    Fracao ret(1, 1);
+    ret.n = this->n * f.d + f.n * this->d;
+    ret.d = this->d * f.d;
+    ret.simplificar();
+
+    return ret;
+}
+
+std::ostream& operator<<(std::ostream& os, const Fracao& f) {
+    os << f.n << '/' << f.d;
+    return os;
 }

@@ -5,8 +5,7 @@
 
 using namespace std;
 
-bool fim()
-{
+bool fim() {
     string resp;
     cout << "\nDeseja terminar o programa? (N/s)" << endl;
     getline(cin, resp);
@@ -19,8 +18,7 @@ bool fim()
     return false;
 }
 
-int main()
-{
+int main() {
     // Testes com a classe Fracao
     Fracao f1(2, 10), f2(3, 45), f3(10, 6);
     f1.simplificar();
@@ -30,6 +28,12 @@ int main()
     cout << f1.getNumerador() << "/" << f1.getDenominador() << endl;
     cout << f2.getNumerador() << "/" << f2.getDenominador() << endl;
     cout << f3.getNumerador() << "/" << f3.getDenominador() << endl;
+    cout << endl;
+    
+    f3 = f1 + f2;
+    cout << f3 << endl;
+    cout << Fracao(2, 3) + Fracao(3, 4);
+    cout << endl;
 
     // Testes com a classe Matematica
     /*

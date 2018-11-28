@@ -1,6 +1,8 @@
 #ifndef FRACAO_H
 #define FRACAO_H
 
+#include <iostream>  
+
 class Fracao {
     public:
         Fracao(int, int);
@@ -14,6 +16,7 @@ class Fracao {
         Fracao operator-(const Fracao&);
         Fracao operator*(const Fracao&);
         Fracao operator/(const Fracao&);
+        friend std::ostream& operator<<(std::ostream&, const Fracao&);
     protected:
         int n;
         int d;
