@@ -1,3 +1,0 @@
-/home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles/rebuild_cache.dir
-/home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles/programa.dir
-/home/eduardo/Desktop/temp/cmake-example/build/CMakeFiles/edit_cache.dir

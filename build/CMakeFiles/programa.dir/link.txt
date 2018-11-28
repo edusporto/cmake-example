@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/programa.dir/main.cpp.o CMakeFiles/programa.dir/src/Fracao.cpp.o CMakeFiles/programa.dir/src/Matematica.cpp.o  -o programa 
