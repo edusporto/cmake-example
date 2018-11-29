@@ -5,6 +5,7 @@
 
 class Fracao {
     public:
+	Fracao();
         Fracao(int, int);
         ~Fracao();
         void setNumerador(int);

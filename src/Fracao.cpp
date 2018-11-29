@@ -1,3 +1,5 @@
+
+#include <exception>
 #include "fracao.h"
 
 /*inline int mmc(int num1, int num2) {
@@ -13,7 +15,14 @@
     return mmc;
 }*/
 
+Fracao::Fracao() {
+    this->n = 1;
+    this->d = 1;
+}
+
 Fracao::Fracao(int numerador, int denominador) {
+    if (denominador == 0)
+        throw std::range_error("Division by zero");
     this->n = numerador;
     this->d = denominador;
 }
@@ -27,6 +36,8 @@ void Fracao::setNumerador(int numerador) {
 }
 
 void Fracao::setDenominador(int denominador) {
+    if (denominador == 0)
+        throw std::range_error("Division by zero");
     this->d = denominador;
 }
 

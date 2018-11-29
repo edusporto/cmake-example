@@ -32,8 +32,13 @@ int main() {
     
     f3 = f1 + f2;
     cout << f3 << endl;
-    cout << Fracao(2, 3) + Fracao(3, 4);
+    cout << Fracao(2, 3) + Fracao(3, 4) << endl;
     cout << endl;
+
+    //Fracao f4(1, 0);
+    //cout << f4 << endl;
+
+
 
     // Testes com a classe Matematica
     /*
