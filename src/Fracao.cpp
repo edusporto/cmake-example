@@ -154,3 +154,28 @@ bool Fracao::operator > (const Fracao& f) {
         return true;
     return false;
 }
+
+Fracao Fracao::operator ++ () {
+    // ++f
+    this->n += this->d;
+    return *this;
+}
+
+Fracao Fracao::operator ++ (int) {
+    // f++
+    this->n += this->d;
+    return Fracao(this->n - this->d, this->d);
+}
+
+Fracao Fracao::operator -- () {
+    // --f
+    this->n -= this->d;
+    return *this;
+}
+
+Fracao Fracao::operator -- (int) {
+    // f--
+    this->n -= this->d;
+    return Fracao(this->n + this->d, this->d);
+}
+

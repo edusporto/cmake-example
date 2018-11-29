@@ -26,15 +26,15 @@ int main() {
     f1.simplificar();
     f2.simplificar();
     f3.simplificar();
-    cout << f1.getNumerador() << "/" << f1.getDenominador() << endl;
-    cout << f2.getNumerador() << "/" << f2.getDenominador() << endl;
-    cout << f3.getNumerador() << "/" << f3.getDenominador() << endl;
+    cout << "f1 = " << f1.getNumerador() << "/" << f1.getDenominador() << endl;
+    cout << "f2 = " << f2.getNumerador() << "/" << f2.getDenominador() << endl;
+    cout << "f3 = " << f3.getNumerador() << "/" << f3.getDenominador() << endl;
     cout << endl;
     
     cout << "Teste 2" << endl;
     f3 = f1 + f2;
-    cout << f3 << endl;
-    cout << Fracao(2, 3) + Fracao(3, 4) << endl;
+    cout << "f1 + f2 = " << f3 << endl;
+    cout << "2/3 + 3/4 = " << Fracao(2, 3) + Fracao(3, 4) << endl;
     cout << endl;
 
     cout << "Teste 3" << endl;
@@ -49,9 +49,9 @@ int main() {
     cout << endl;
 
     cout << "Teste 5" << endl;
-    cout << (int)f1 << endl;
-    cout << (float)f1 << endl;
-    cout << (double)f1 << endl;
+    cout << "(int)f1 = " << (int)f1 << endl;
+    cout << "(float)f1 = "  << (float)f1 << endl;
+    cout << "(double)f1 = "  << (double)f1 << endl;
     cout << endl;
 
     cout << "Teste 6" << endl;
@@ -59,6 +59,16 @@ int main() {
     cout << f1 << " > " << f2 << " = " << (f1 > f2) << endl;
     cout << endl;
 
+    cout << "Teste 7" << endl;
+    cout << "f1++ retorna " << f1++ << endl;
+    f1--;
+    cout << "++f1 retorna " << ++f1 << endl;
+    f1--;
+    cout << "f1-- retorna " << f1-- << endl;
+    f1++;
+    cout << "--f1 retorna " << --f1 << endl;
+    f1++;
+    cout << endl;
 
     // Testes com a classe Matematica
     /*

@@ -26,6 +26,10 @@ class Fracao {
         friend std::ostream& operator<<(std::ostream&, const Fracao&);
         bool operator < (const Fracao&);
         bool operator > (const Fracao&);
+        Fracao operator++ ();
+        Fracao operator++ (int);
+        Fracao operator-- ();
+        Fracao operator-- (int);
     protected:
         int n;
         int d;
