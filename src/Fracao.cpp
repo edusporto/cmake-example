@@ -78,7 +78,7 @@ Fracao Fracao::operator+(const Fracao& f) {
     if (this->d == f.d)
         return Fracao(this->n + f.n, this->d);
     
-    Fracao ret(1, 1);
+    Fracao ret;
     ret.n = this->n * f.d + f.n * this->d;
     ret.d = this->d * f.d;
     ret.simplificar();
@@ -86,7 +86,71 @@ Fracao Fracao::operator+(const Fracao& f) {
     return ret;
 }
 
+Fracao Fracao::operator-(const Fracao& f) {
+    if (this->d == f.d)
+        return Fracao(this->n - f.n, this->d);
+    
+    Fracao ret;
+    ret.n = this->n * f.d - f.n * this->d;
+    ret.d = this->d * f.d;
+    ret.simplificar();
+
+    return ret;
+}
+
+Fracao Fracao::operator*(const Fracao& f) {
+    Fracao ret(this->n * f.n, this->d * f.d);
+    ret.simplificar();
+    return ret;
+
+    // da erro: return Fracao(this->n * f.n, this->d * f.d).simplificar();
+}
+
+Fracao Fracao::operator/(const Fracao& f) {
+    Fracao ret(this->n * f.d, this->d * f.n);
+    ret.simplificar();
+    return ret;
+    
+    // da erro: return Fracao(this->n * f.d, this->d * f.n).simplificar();
+}
+
+Fracao::operator int() {
+    return this->n / this->d;
+}
+
+Fracao::operator float() {
+    return (float)this->n/this->d;
+}
+
+Fracao::operator double() {
+    return (double)this->n/this->d;
+}
+
+Fracao::operator int() const {
+    return this->n / this->d;
+}
+
+Fracao::operator float() const {
+    return (float)this->n/this->d;
+}
+
+Fracao::operator double() const {
+    return (double)this->n/this->d;
+}
+
 std::ostream& operator<<(std::ostream& os, const Fracao& f) {
     os << f.n << '/' << f.d;
     return os;
+}
+
+bool Fracao::operator < (const Fracao& f) {
+    if ((double)*this < (double)f)
+        return true;
+    return false;
+}
+
+bool Fracao::operator > (const Fracao& f) {
+    if ((double)*this > (double)f)
+        return true;
+    return false;
 }
