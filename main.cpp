@@ -80,7 +80,7 @@ int main() {
     cout << endl;
 
     cout << "Teste 9" << endl;
-    cout << "0.6 = " << Fracao(-0.75) << endl;
+    cout << "-0.75 = " << Fracao(-0.75) << endl;
     cout << endl;
 
 
