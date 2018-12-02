@@ -7,7 +7,8 @@ class Fracao {
     public:
 	Fracao();
         Fracao(int, int);
-        ~Fracao();
+        Fracao(double);
+        virtual ~Fracao();
         void setNumerador(int);
         void setDenominador(int);
         int getNumerador();
@@ -17,6 +18,10 @@ class Fracao {
         Fracao operator-(const Fracao&);
         Fracao operator*(const Fracao&);
         Fracao operator/(const Fracao&);
+        Fracao operator+(int);
+        Fracao operator-(int);
+        Fracao operator*(int);
+        Fracao operator/(int);
         operator int();
         operator float();
         operator double();
@@ -30,9 +35,19 @@ class Fracao {
         Fracao operator++ (int);
         Fracao operator-- ();
         Fracao operator-- (int);
+        Fracao& operator+= (const Fracao&);
+        Fracao& operator+= (int);
+        Fracao& operator-= (const Fracao&);
+        Fracao& operator-= (int);
+        bool operator==(const Fracao&);
     protected:
         int n;
         int d;
 };
+
+Fracao operator+(int, Fracao);
+Fracao operator-(int, Fracao);
+Fracao operator*(int, Fracao);
+Fracao operator/(int, Fracao);
 
 #endif

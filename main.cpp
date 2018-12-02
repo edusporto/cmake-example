@@ -35,6 +35,8 @@ int main() {
     f3 = f1 + f2;
     cout << "f1 + f2 = " << f3 << endl;
     cout << "2/3 + 3/4 = " << Fracao(2, 3) + Fracao(3, 4) << endl;
+    cout << "f1 + 1 = " << f1 + 1 << endl;
+    cout << "1 + f1 = " << 1 + f1 << endl;
     cout << endl;
 
     cout << "Teste 3" << endl;
@@ -47,6 +49,9 @@ int main() {
     cout << f1 << " * " << f2 << " = " << f1 * f2 << endl;
     cout << f1 << " / " << f2 << " = " << f1 / f2 << endl;
     cout << endl;
+
+    //cout << "Teste 4.5" << endl;
+    //cout << Fracao(1,1) / Fracao(0,1) << endl;
 
     cout << "Teste 5" << endl;
     cout << "(int)f1 = " << (int)f1 << endl;
@@ -69,6 +74,15 @@ int main() {
     cout << "--f1 retorna " << --f1 << endl;
     f1++;
     cout << endl;
+
+    cout << "Teste 8" << endl;
+    cout << "(2/4 == 1/2) = " << (Fracao(2,4) == Fracao(1,2)) << endl;
+    cout << endl;
+
+    cout << "Teste 9" << endl;
+    cout << "0.6 = " << Fracao(-0.75) << endl;
+    cout << endl;
+
 
     // Testes com a classe Matematica
     /*

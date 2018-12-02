@@ -25,6 +25,22 @@ Fracao::Fracao(int numerador, int denominador) {
         throw std::range_error("Division by zero");
     this->n = numerador;
     this->d = denominador;
+    this->simplificar();
+}
+
+Fracao::Fracao(double numero) {
+    int inicio = numero;
+    int n = numero;
+    int d = 1;
+    while ((double)n != numero) {
+        n = numero = numero * 10;
+        d *= 10;
+    }
+
+    this->n = inicio==0 ? numero : (inicio >= 1 || inicio <= 1 ? n : n + d*inicio);
+    this->d = d;
+
+    this->simplificar();
 }
 
 Fracao::~Fracao() {
@@ -50,10 +66,19 @@ int Fracao::getDenominador() {
 }
 
 void Fracao::simplificar() {
-    // TA DANDO ERRO
+
+    bool negativo;
+    if ((this->n < 0 && this->d > 0) ||
+         this->n > 0 && this->d < 0)
+        negativo = true;
+    else
+        negativo = false;
 
     bool fim;
     int i;
+
+    if (this->n < 0) this->n = -this->n;
+    if (this->d < 0) this->d = -this->d;
     int maior = (this->n > this->d ? this->n : this->d);
     int menor = (this->n < this->d ? this->n : this->d);
     
@@ -72,6 +97,8 @@ void Fracao::simplificar() {
             }
         }
     }
+
+    if (negativo) this->n = -this->n;
 }
 
 Fracao Fracao::operator+(const Fracao& f) {
@@ -112,6 +139,38 @@ Fracao Fracao::operator/(const Fracao& f) {
     return ret;
     
     // da erro: return Fracao(this->n * f.d, this->d * f.n).simplificar();
+}
+
+Fracao Fracao::operator+(int i) {
+    return *this + Fracao(i, 1);
+}
+
+Fracao operator+(int i, Fracao f) {
+    return f + Fracao(i, 1);
+}
+
+Fracao Fracao::operator-(int i) {
+    return *this - Fracao(i, 1);
+}
+
+Fracao operator-(int i, Fracao f) {
+    return f - Fracao(i, 1);
+}
+
+Fracao Fracao::operator*(int i) {
+    return *this * Fracao(i, 1);
+}
+
+Fracao operator*(int i, Fracao f) {
+    return f * Fracao(i, 1);
+}
+
+Fracao Fracao::operator/(int i) {
+    return *this / Fracao(i, 1);
+}
+
+Fracao operator/(int i, Fracao f) {
+    return f / Fracao(i, 1);
 }
 
 Fracao::operator int() {
@@ -179,3 +238,31 @@ Fracao Fracao::operator -- (int) {
     return Fracao(this->n + this->d, this->d);
 }
 
+Fracao& Fracao::operator+= (const Fracao& f) {
+    *this = *this + f;
+    return *this;
+}
+
+Fracao& Fracao::operator+= (int i) {
+    *this = *this + i;
+    return *this;
+}
+
+Fracao& Fracao::operator-= (const Fracao& f) {
+    *this = *this + f;
+    return *this;
+}
+
+Fracao& Fracao::operator-= (int i) {
+    *this = *this - i;
+    return *this;
+}
+
+bool Fracao::operator== (const Fracao& f) {
+    Fracao a = *this;
+    Fracao b = f;
+    a.simplificar(); b.simplificar();
+    if (a.n == b.n && a.d == b.d)
+        return true;
+    return false;
+}
