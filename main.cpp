@@ -83,6 +83,16 @@ int main() {
     cout << "-0.75 = " << Fracao(-0.75) << endl;
     cout << endl;
 
+    Fracao* frac = new Fracao(2, 3);
+    Fracao* frac2 = new Fracao;
+    frac2->setNumerador(4); frac2->setDenominador(5);
+    cout << "Teste 10" << endl;
+    cout << "2/3 += 4/5 = " << (*frac += *frac2) << endl;
+    cout << *frac << "-= 4 = " << (*frac -= 4) << endl; 
+    cout << endl;
+    delete frac;
+    delete frac2;
+
 
     // Testes com a classe Matematica
     /*
