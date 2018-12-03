@@ -173,18 +173,6 @@ Fracao operator/(int i, Fracao f) {
     return f / Fracao(i, 1);
 }
 
-Fracao::operator int() {
-    return this->n / this->d;
-}
-
-Fracao::operator float() {
-    return (float)this->n/this->d;
-}
-
-Fracao::operator double() {
-    return (double)this->n/this->d;
-}
-
 Fracao::operator int() const {
     return this->n / this->d;
 }
@@ -196,6 +184,18 @@ Fracao::operator float() const {
 Fracao::operator double() const {
     return (double)this->n/this->d;
 }
+
+/*Fracao::operator int() const {
+    return this->n / this->d;
+}
+
+Fracao::operator float() const {
+    return (float)this->n/this->d;
+}
+
+Fracao::operator double() const {
+    return (double)this->n/this->d;
+}*/
 
 std::ostream& operator<<(std::ostream& os, const Fracao& f) {
     os << f.n << '/' << f.d;

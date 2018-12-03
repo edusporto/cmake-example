@@ -93,7 +93,6 @@ int main() {
     delete frac;
     delete frac2;
 
-
     // Testes com a classe Matematica
     /*
     double n1;

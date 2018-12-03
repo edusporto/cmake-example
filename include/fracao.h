@@ -22,9 +22,9 @@ class Fracao {
         Fracao operator-(int);
         Fracao operator*(int);
         Fracao operator/(int);
-        operator int();
+        /*operator int();
         operator float();
-        operator double();
+        operator double();*/
         operator int() const;
         operator float() const;
         operator double() const;
